@@ -43,7 +43,7 @@
     }
 
     text.pagetext {
-        font-size: 48px;
+        font-size: 15px;
         font-weight: 700;
         fill: #cccccc;
     }
@@ -105,7 +105,7 @@
     var pagetext = svg.append('text')
         .attrs({
             class: 'pagetext',
-            x: width - 400,
+            x: width - 100,
             y: height - 100
         })
         .html("");
@@ -144,7 +144,7 @@
 
         var x = d3.scaleLinear()
             .domain([d3.min(data, d => d.value), d3.max(data, d => d.value)])
-            .range([margin.left, width - margin.right - 65]);
+            .range([margin.left, width - margin.right - 30]);
 
 
         var y = d3.scaleBand()
